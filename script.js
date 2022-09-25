@@ -1,10 +1,14 @@
 const quiz = new Quiz(questions);
 
 function optionSelected(option) {
+    clearInterval(counter);
+    clearInterval(counterLine);
+    ui.timer_text.textContent = "Cevaplandı: ";
     let answer = option.querySelector("span b").textContent;
     let question = quiz.getQuestion();
 
     if(question.checkAnswer(answer)) {
+        quiz.correctAnswers += 1;
         option.classList.add("correct");
         option.insertAdjacentHTML("beforeend", ui.correctIcon);
     }else {

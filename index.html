@@ -17,6 +17,11 @@
     <div class="card quiz_box">
         <header class="card-header">
             <div class="title">Quiz Application</div>
+            <div class="timer">
+                <div class="timer_text">Kalan Süre: </div>
+                <div class="timer_second">10</div>
+            </div>
+            <div class="time_line"></div>
         </header>
         <section class="card-body">
             <div class="question_text">
@@ -47,10 +52,19 @@
             <button class="next_btn btn btn-primary btn-sm">Sonraki soru</button>
         </footer>
     </div>
+    <div class="card score_box">
+        <div class="icon"><i class="fas fa-crown"></i></div>
+        <div class="score_text"></div>
+        <div class="buttons">
+            <button class="btn btn-primary btn_replay">Tekrar Başlat</button>
+            <button class="btn btn-primary btn_quit">Testi Bitir</button>
+        </div>
+    </div>
 
     <script src="ui.js"></script>
-    <script src="button.js"></script>
+    <script src="timer.js"></script>
     <script src="questions.js"></script>
+    <script src="button.js"></script>
     <script src="quiz.js"></script>
     <script src="script.js"></script>
 </body>
